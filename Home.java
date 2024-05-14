@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 public class Home extends JFrame {
     private JLabel EURLabel, GBRLabel, JPYLabel,boLabel, soLabel;
     private JButton EURButton, GBRButton, JPYButton;
-
+    private ImageIcon img;
+    private JLabel imageLabel;
     private static final int BUTTON_WIDTH = 100;
     private static final int BUTTON_HEIGHT = 30;
     private static final Font BUTTON_FONT = new Font("Arial", Font.BOLD, 14);
@@ -16,6 +17,12 @@ public class Home extends JFrame {
         setBounds(200, 100, 800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+
+	    
+		img = new ImageIcon(Login.class.getResource("home.jpg")); 
+        imageLabel = new JLabel(img);
+        imageLabel.setBounds(300, 70, 490, 350);
+        add(imageLabel);
 
         // Create a panel for buttons
         JPanel buttonPanel = new JPanel();
