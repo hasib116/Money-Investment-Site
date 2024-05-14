@@ -140,7 +140,7 @@ public class Sigin extends JFrame {
 
     private void saveUserInfo(String username, String email, String phone, String gender, String birthDate, String address, String password) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("user_info.txt", true))) {
-		writer.write(username + ":" + password "\n" );
+		writer.write(username + ":" + password +"\n" );
             writer.write("Username: " + username + "\n");
             writer.write("Email: " + email + "\n");
             writer.write("Phone No: " + phone + "\n");
